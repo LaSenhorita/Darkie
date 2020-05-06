@@ -99,5 +99,5 @@ layout: default
 
 	<div class="post_info">
 		<hr>
-		<p>Published by <span itemprop="author">{{ site.author }}</span> (<time itemprop="datePublished">{{ post.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} <a href="{{ site.url }}/posts/tags/#{{ tag | replace: ' ', '_' }}">#{{ tag }}</a>{% endfor %}.</p>
+		<p>Published by <span itemprop="author">{{ site.author }}</span> (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} <a href="{{ site.url }}/posts/tags/#{{ tag | replace: ' ', '_' }}">#{{ tag }}</a>{% endfor %}.</p>
 	</div>
