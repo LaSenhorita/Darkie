@@ -1,0 +1,10 @@
+---
+layout: default
+title: "Archive"
+---
+<p>I've written {{ site.posts.size }} post(s) since {{ site.posts.last.date | date: "%b %d, %Y" }}.</p>
+<ul>
+{% for post in site.posts %}
+<li>{{ post.date | date: "%b %d, %Y" }}&nbsp;|&nbsp;<a href="{{ site.url }}{{ post.url }}index.html">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
