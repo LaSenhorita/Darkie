@@ -6,8 +6,6 @@ layout: default
 <article itemscope itemtype="https://schema.org/BlogPosting">
 	<meta itemprop="name" content="{{ page.title }}">
 	<meta itemprop="description" content="{{ page.description }}">
-	<meta itemprop="datePublished" content="2009-07-22T00:00:00&#43;00:00" />
-	<meta itemprop="dateModified" content="2009-07-22T00:00:00&#43;00:00" />
 	<meta itemprop="wordCount" content="590">
 	<meta itemprop="image" content="https://habd.as/images/8pd8ycjjkiq-maxime-le-conte-des-floris.jpg" />
 
@@ -20,7 +18,7 @@ layout: default
 			<!-- <svg aria-hidden="true" style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="16" cy="16" r="14" /><path d="M16 8 L16 16 20 20" /></svg>
 			<a href="index.html">3 minute read</a> -->
 			<svg aria-hidden="true" style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" /></svg>
-			<!-- <time datetime="2009-07-22T00:00:00&#43;00:00"> --><a href="#">{{ page.date | date: "%b %d, %Y" }}</a><!-- </time> -->&nbsp;Published
+			<!-- <time datetime="2009-07-22T00:00:00&#43;00:00"> --><a href="{{ site.url }}/posts/archive/index.html">{{ page.date | date: "%b %d, %Y" }}</a><!-- </time> -->&nbsp;Published
 			<output class="js-copied" hidden>Copied to Clipboard</output>
 			<script>
 				((window, document, undefined) => {
