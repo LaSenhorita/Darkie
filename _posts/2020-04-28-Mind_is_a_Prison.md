@@ -2,6 +2,9 @@
 title: "Mind is a Prison"
 category: "Mood"
 tags: ["Sadness"]
+hero:
+  format: 'jpeg'
+  url: 'HERO_SADNESS_H_0001.jpg'
 ---
 All I need, all I want, all I find,
 

@@ -16,12 +16,12 @@ active_title: 'Home'
           <a itemprop="url" href="{{ site.url }}{{ post.url }}index.html">
             <figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
 							{% if post.hero.url.size > 0%}
-							{% assign post_hero = (site.url | append: '/assets/images/posts/hero/' | append: post.hero.url ) %}
+							{% assign post_hero = (site.url | append: site.hero.path | append: post.hero.url ) %}
 							{% else %}
-							{% assign post_hero = (site.url | append: '/assets/images/posts/hero/' | append: site.hero.url ) %}
+							{% assign post_hero = (site.url | append: site.hero.path | append: site.hero.url ) %}
 							{% endif %}
               <link itemprop="contentUrl" href="{{ post_hero }}">
-              <meta itemprop="encodingFormat" content="image/png">
+              <meta itemprop="encodingFormat" content="image/{{ post.hero.format }}">
               <meta itemprop="name" content="thumbnail">
               <meta itemprop="headline" content="{{ post_hero }}">
               <img itemprop="thumbnailUrl" alt="thumbnail" src="{{ post_hero }}" data-src="{{ post_hero }}">

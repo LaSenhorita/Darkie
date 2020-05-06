@@ -2,6 +2,9 @@
 title: "No Contact"
 category: "Mood"
 tags: ["Sadness"]
+hero:
+  format: 'jpeg'
+  url: 'HERO_SADNESS_H_0003.jpg'
 ---
 I know why. And understand that this is how it has to be.
 

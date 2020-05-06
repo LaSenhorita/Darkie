@@ -65,9 +65,9 @@ layout: default
 		<!-- BEGIN PAGE HERO -->
 		{% if page.hero.url.size > 0%}
 		<figure class="ratio-container" aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
-			{% assign page_hero = (site.url | append: '/assets/images/posts/hero/' | append: page.hero.url ) %}
+			{% assign page_hero = (site.url | append: site.hero.path | append: page.hero.url ) %}
 			<link itemprop="contentUrl" href="{{ page_hero }}">
-			<meta itemprop="encodingFormat" content="image/jpeg">
+			<meta itemprop="encodingFormat" content="image/{{ post.hero.format }}">
 			<meta itemprop="name" content="header">
 			<meta itemprop="keywords" content="{{ site.name }}">
 			<meta itemprop="contentLocation" content="Shenzhen, China">

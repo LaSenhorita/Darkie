@@ -17,11 +17,11 @@ path:
   js: "/assets/js"
 
 hero:
-  loc: '/assets/images/posts/hero'
   url: 'hero.png'
   author: "Chiu"
   name: 'Señorita'
   site: 'Señorita'
+  path: '/assets/images/hero/'
 
 highlighter: rouge
 markdown: kramdown
