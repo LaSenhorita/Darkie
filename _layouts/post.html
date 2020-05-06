@@ -72,7 +72,8 @@ layout: default
 			<meta itemprop="keywords" content="{{ site.name }}">
 			<meta itemprop="contentLocation" content="Shenzhen, China">
 			<meta itemprop="description" content="{{ site.description }}">
-			<img itemprop="thumbnailUrl" alt="{{ page.title }}" <!--class="lazyload blur-up" -->src="{{ page_hero }}g" srcset="{{ page_hero }}" data-srcset="{{ page_hero }}" data-sizes="auto">
+			<!-- <img itemprop="thumbnailUrl" alt="{{ page.title }}" class="lazyload blur-up" src="{{ page_hero }}g" srcset="{{ page_hero }}" data-srcset="{{ page_hero }}" data-sizes="auto"> -->
+			<img itemprop="thumbnailUrl" alt="{{ page.title }}" src="{{ page_hero }}g" srcset="{{ page_hero }}" data-srcset="{{ page_hero }}" data-sizes="auto">
 			{% if page.hero.name.size > 0 %}
 			<figcaption itemprop="caption"><span itemprop="headline">{{ page.hero.name }}</span>. Photo by <span itemprop="creator">{{ page.hero.author }}</span> on {{ page.hero.site }}.</figcaption>
 			{% endif %}
