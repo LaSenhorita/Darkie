@@ -1,0 +1,35 @@
+.page_actions * {
+  font-size: 16px !important;
+}
+.page_actions a.btn {
+  border-radius: 3px !important;
+  background: white !important;
+  color: #444 !important;
+  padding: 3px 6px !important;
+  margin-right: 1em !important;
+}
+.page_actions span.tag_span, .page_actions span.cat_span {
+  display: inline-block !important;
+  margin-right: 1em !important;
+}
+.page_actions a.tag, .page_actions a.cat {
+  display: inline-block !important;
+  font-weight: 400 !important;
+  color: white !important;
+}
+.page_actions a.tag::before {
+    background-color: #ffd43b !important;
+}
+.page_actions a.cat::before {
+    background-color: #d4ff3b !important;
+}
+.page_actions a.tag::before, .page_actions a.cat::before {
+  display: block !important;
+  content: "" !important;
+  position: absolute !important;
+  left: -.25em !important;
+  bottom: 0 !important;
+  width: calc(100% + 0.5em) !important;
+  height: .2em !important;
+  z-index: -10 !important;
+}

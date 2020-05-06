@@ -97,5 +97,5 @@
 {% assign tocWorkspace = '' %}
 {% assign mdtoc = my_toc | markdownify | strip %}
 {% if mdtoc.size > 0 %}
-<br /><h2>{% if page.toc == 'cn' %}目录{% else %}Table of Content{% endif %}</h2>{{ mdtoc }}<br />
+	<h2>{% if page.toc == 'cn' %}目录{% else %}Table of Content{% endif %}</h2>{{ mdtoc }}<br />
 {% endif %}

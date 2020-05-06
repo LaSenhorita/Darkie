@@ -1,103 +1,43 @@
 ---
-layout: default
+layout: base
 ---
-<link rel="stylesheet" href="{{ site.url }}/assets/css/post.css">
-
-<article itemscope itemtype="https://schema.org/BlogPosting">
-	<meta itemprop="name" content="{{ page.title }}">
-	<meta itemprop="description" content="{{ page.description }}">
-	<meta itemprop="wordCount" content="590">
-	<meta itemprop="image" content="https://habd.as/images/8pd8ycjjkiq-maxime-le-conte-des-floris.jpg" />
-
-	<meta itemprop="keywords" content="dom,http,javascript,patterns,user agent," />
-	<header>
-		<!-- <h1 itemprop="headline name">{{ page.title }}</h1> -->
-		<p class="muted">
-			<svg aria-hidden="true" class="i-bookmark" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 2 L26 2 26 30 16 20 6 30 Z" /></svg>
-			<a rel="bookmark" itemprop="url" href="{{ site.url }}{{ page.url }}index.html">Permalink</a>
-			<!-- <svg aria-hidden="true" style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="16" cy="16" r="14" /><path d="M16 8 L16 16 20 20" /></svg>
-			<a href="index.html">3 minute read</a> -->
-			<svg aria-hidden="true" style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" /></svg>
-			<!-- <time datetime="2009-07-22T00:00:00&#43;00:00"> --><a href="{{ site.url }}/posts/archive/index.html">{{ page.date | date: "%b %d, %Y" }}</a><!-- </time> -->&nbsp;Published
-			<output class="js-copied" hidden>Copied to Clipboard</output>
-			<script>
-				((window, document, undefined) => {
-					'use strict';
-					const permalinks = document.querySelectorAll('[rel="bookmark"]');
-					permalinks.forEach(permalink => {
-						const article = permalink.closest('article');
-						permalink.onclick = evt => {
-							evt.preventDefault();
-							document.location.hash = article.id;
-							const output = article.querySelector('output');
-							window.navigator.clipboard.writeText(
-								permalink.href
-							).then(() => {
-								setTimeout(() => {
-									output.hidden = true;
-								}, 2000);
-								output.hidden = false;
-							}, () => {
-								const selection = window.getSelection();
-								const range = document.createRange();
-								output.textContent = permalink.href;
-								permalink.parentElement.appendChild(output);
-								range.selectNodeContents(output);
-								selection.removeAllRanges();
-								selection.addRange(range);
-								output.hidden = false;
-							});
-						};
-					});
-				})(window, document);
-			</script>
-			<style>
-				article[itemscope] output {
-					max-width: 10em;
-					overflow: scroll;
-					color: var(--link-color--active);
-				}
-			</style>
-
-		</p>
-		<!-- BEGIN PAGE HERO -->
-		{% if page.hero.url.size > 0%}
-		<figure class="ratio-container" aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
-			{% assign page_hero = (site.url | append: site.hero.path | append: page.hero.url ) %}
-			<link itemprop="contentUrl" href="{{ page_hero }}">
-			<meta itemprop="encodingFormat" content="image/{{ post.hero.format }}">
-			<meta itemprop="name" content="header">
-			<meta itemprop="keywords" content="{{ site.name }}">
-			<meta itemprop="contentLocation" content="Shenzhen, China">
-			<meta itemprop="description" content="{{ site.description }}">
-			<!-- <img itemprop="thumbnailUrl" alt="{{ page.title }}" class="lazyload blur-up" src="{{ page_hero }}g" srcset="{{ page_hero }}" data-srcset="{{ page_hero }}" data-sizes="auto"> -->
-			<img itemprop="thumbnailUrl" alt="{{ page.title }}" src="{{ page_hero }}g" srcset="{{ page_hero }}" data-srcset="{{ page_hero }}" data-sizes="auto">
-			{% if page.hero.name.size > 0 %}
-			<figcaption itemprop="caption"><span itemprop="headline">{{ page.hero.name }}</span>. Photo by <span itemprop="creator">{{ page.hero.author }}</span> on {{ page.hero.site }}.</figcaption>
-			{% endif %}
-		</figure>
-		{% endif %}
-		<!-- END PAGE HERO -->
-	</header>
-
-	<div itemprop="articleBody">
-		<link rel="stylesheet" href="{{ site.url }}/assets/css/syntax.css">
-		<!-- BEGIN PAGE CONTENT [POST] -->
-    {% include toc.html html=content %}{{ content }}
-		<!-- END PAGE CONTENT [POST] -->
-		<br />
-		<!-- START POST SIGNATURE -->
-		<div class="sign" style="height: 128px !important;">
-			<img alt="Señorita" src="{{ site.url }}{{ site.path.images }}/sign_s.png" style="float: right !important; width: 256px !important; max-width: 100% !important;">
-		</div>
-		<!-- END POST SIGNATURE -->
+<div class="page_actions"><span class="cat_span"><a href="{{ site.url }}/posts/categories/#{{ page.category | replace: ' ', '_' }}" class="cat">#{{ page.category }}</a></span>{% for tag in page.tags %}<span class="tag_span"><a href="{{ site.url }}/posts/tags/#{{ tag | replace: ' ', '_' }}" class="tag">#{{ tag }}</a></span>{% endfor %}</div>
+<br />
+<section class="page__content">
+	<div>
+		{% include toc.html html=content %}{{ content }}
 	</div>
-
-	<div class="page_actions"><center>
-	<!-- <a onclick="history.back(-1)" class="btn">&lt; Back</a> -->{% if page.next %}<a class="btn" href="{{ site.url }}{{ page.next.url }}index.html">&lt;&nbsp;Newer:&nbsp;{{ page.next.title }}</a>&nbsp;{% endif %}{% if page.previous %}<a class="btn" href="{{ site.url }}{{ page.previous.url }}index.html">Older:&nbsp;{{ page.previous.title }}&nbsp;&gt;</a>{% endif %}
-	</center></div>
-
-	<div class="post_info">
-		<hr>
-		<p>Published by <span itemprop="author"><a href="{{ site.url }}/about/index.html">@{{ site.author }}</a></span> (<time itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>) in <span itemprop="articleSection"><a href="{{ site.url }}/posts/categories/index.html#{{ page.category | replace: ' ', '_' }}">{{ page.category }}</a></span> and tagged{% for tag in page.tags %} <a href="{{ site.url }}/posts/tags/#{{ tag | replace: ' ', '_' }}">#{{ tag }}</a>{% endfor %}.</p>
+	{% if page.author.size > 0 %}
+	<!-- something -->
+	{% else %}
+	<div class="sign" style="height: 128px !important;">
+		<img alt="Señorita" src="{{ site.url }}{{ site.path.images }}/sign_s.png" style="float: right !important; width: 256px !important; max-width: 100% !important;">
 	</div>
+	{% endif %}
+</section>
+<br />
+{% include comment.html %}
+<br /><hr>
+<div class="page_actions">
+	<a onclick="history.back(-1)" class="btn">&lt; Back</a><a href="{{ site.url }}/posts/archive/" class="btn">Archive</a><br />
+	{% if page.next %}<a class="btn" href="{{ site.url }}{{ page.next.url }}">&lt;&nbsp;Newer:&nbsp;{{ page.next.title }}</a>{% endif %}{% if page.previous %}<a class="btn" href="{{ site.url }}{{ page.previous.url }}">Older:&nbsp;{{ page.previous.title }}&nbsp;&gt;</a>{% endif %}
+</div>
+<br />
+<section class="page__content" style="border: 1px solid #fff; border-radius: 5px; padding: 5px;">
+	<h4>If You Don't Know...</h4>
+	<ul>
+		<li><p>Normal Content</p></li>
+		<li><strong>Bold Content</strong></li>
+		<li><em>Italic Content</em></li>
+		<li><a href="#">Link</a></li>
+		<li><code>Inline Programming Code</code></li>
+		<li><p>Blockquote:</p></li>
+		<blockquote>
+			<p>Dolore quam distinctio eos cupiditate. Dolor rerum ut itaque quia et in. Dolor hic quod voluptatibus incidunt sed officiis maiores.</p>
+		</blockquote>
+		<li><p>Programming Code Block:</p></li>
+		<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">str</span> <span class="o">=</span> <span class="s">"CODE BLOCK"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">s"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span></code></pre></div></div>
+	</ul>
+</section>

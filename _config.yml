@@ -1,28 +1,14 @@
 name: "Señorita"
 owner: "Chiu"
-author: "Chiu"
-avatar: "/assets/images/avatar_round.png"
+avatar: "/assets/images/avatar_cat.jpg"
 description: "The name is Chiu and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
-url: "https://lasenhorita.github.io/Darkie"
-# url: '/Volumes/Shared/Common/Git/Darkie/_site'
-
-range:
-  start: 2020
-  end: 2020
+url: "https://LaSenhorita.github.io/Ignition"
 
 path:
   assets: "/assets"
   images: "/assets/images"
   css: "/assets/css"
   js: "/assets/js"
-
-hero:
-  url: 'HERO_SADNESS_H_0013.jpg'
-  format: 'jpeg'
-  author: "Chiu"
-  name: 'Señorita'
-  site: 'Señorita'
-  path: '/assets/images/hero/'
 
 highlighter: rouge
 markdown: kramdown
@@ -46,4 +32,3 @@ defaults:
       type: posts
     values:
       layout: "post"
-      active_title: "Posts"

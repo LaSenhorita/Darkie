@@ -4,7 +4,7 @@ category: "Mood"
 tags: ["Sadness"]
 hero:
   format: 'jpeg'
-  url: 'HERO_SADNESS_H_0003.jpg'
+  url: 'HERO_SADNESS_H_0002.jpg'
 ---
 I know why. And understand that this is how it has to be.
 

@@ -1,38 +1,12 @@
 ---
 layout: default
-active_title: 'Home'
+title: "Señorita"
+imgs: ["00.jpg", "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg"]
 ---
-		<section>
-      <header>
-        <h1 itemprop="name"><a href="site/index.html">Recent Posts</a></h1>
-        <blockquote itemprop="description">Writing on various topics including travel, finance and technology.</blockquote>
-      </header>
-      <ul class="thumbnail grid" itemscope itemtype="https://schema.org/ItemList">
-        <meta itemprop="itemListOrder" content="Unordered">
-        <meta itemprop="name" content="">
-        <meta itemprop="numberOfItems" content="4">
-				{% for post in site.posts limit: 4%}
-        <li class="cell" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
-          <a itemprop="url" href="{{ site.url }}{{ post.url }}index.html">
-            <figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
-							{% if post.hero.url.size > 0%}
-							{% assign post_hero = (site.url | append: site.hero.path | append: post.hero.url ) %}
-							{% else %}
-							{% assign post_hero = (site.url | append: site.hero.path | append: site.hero.url ) %}
-							{% endif %}
-              <link itemprop="contentUrl" href="{{ post_hero }}">
-              <meta itemprop="encodingFormat" content="image/{{ post.hero.format }}">
-              <meta itemprop="name" content="thumbnail">
-              <meta itemprop="headline" content="{{ post_hero }}">
-              <img itemprop="thumbnailUrl" alt="thumbnail" src="{{ post_hero }}" data-src="{{ post_hero }}">
-							<!-- <img itemprop="thumbnailUrl" alt="thumbnail" src="{{ post_hero }}" data-src="{{ post_hero }}" class="lazyload blur-up"> -->
-            </figure>
-            <h2 itemprop="name">{{ post.title }}</h2>
-          </a>
-          <small itemprop="description"><p>{{ post.excerpt | strip_html | strip_newlines | slice: 0, 100 }}...</p><!--<a  target="_blank" rel="external noopener" href="{{ site.url }}">{{ site.name }}</a>--></small>
-        </li>
-				{% endfor %}
-      </ul>
-      <nav class="readmore"><a itemprop="url" href="{{ site.url }}/posts/index.html">View more posts</a></nav>
-
-    </section>
+<section class="works smooth-in">
+    {% for img in page.imgs %}
+	<div class="work">
+		<img src="{{ site.path.images }}/ignition/{{ img }}">
+	</div>
+	{% endfor %}
+</section>

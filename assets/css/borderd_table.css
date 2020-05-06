@@ -1,0 +1,7 @@
+table.borderd_table td, table.borderd_table th {
+  border: 1px solid white !important;
+  padding: 5px 5px;
+}
+table.borderd_table tr {
+  border-top: 1px solid #dadfe6 !important;
+}

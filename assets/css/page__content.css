@@ -1,0 +1,172 @@
+/* TITLE */
+.page__content h1 {
+	position: relative !important;
+	font-size: 40px !important;
+	text-align: center !important;
+}
+
+.page__content h1::after {
+	border-bottom: 2px dashed #00e500 !important;
+	content: '' !important;
+	width: 100px !important;
+	margin: .2em auto 0 !important;
+	height: 2px !important;
+	display: block !important;
+}
+.page__content h2 {
+	font-size: 36px !important;
+	border-left: 5px solid #cce5ff !important;
+}
+.page__content h3 {
+	font-size: 32px !important;
+	border-left: 5px solid #00e500 !important;
+}
+.page__content h4 {
+	font-size: 28px !important;
+	border-left: 5px solid #aaf00f !important;
+}
+.page__content h5 {
+	font-size: 24px !important;
+	border-left: 5px solid #ff0f00 !important;
+}
+.page__content h1, .page__content h2, .page__content h3, .page__content h4, .page__content h5  {
+	padding-left: 5px !important;
+	margin: 0.5em 0 !important;
+}
+.page__content h1:hover a.anchor, .page__content h2:hover a.anchor, .page__content h3:hover a.anchor, .page__content h4:hover a.anchor, .page__content h5:hover a.anchor  {
+	text-decoration: none !important;
+}
+/* LINK */
+.page__content a {
+	/*text-decoration: underline !important;
+	color: #e2f0ff !important;*/
+	text-decoration: none !important;
+	color: #cce5aa !important;
+}
+/* COMMON */
+.page__content, .page__content p, .page__content a, .page__content blockquote, .page__content ol, .page__content ul, .page__content i, .page__content strong, .page__content em {
+	font-size: 20px !important;
+}
+.page__content p {
+	font-weight: 100 !important;
+	margin: 0 0 !important;
+}
+/* BOLD */
+.page__content strong, .page__content p strong, .page__content b, .page__content p b {
+	font-weight: bold !important;
+	color: #A20000 !important;
+	/* color: #fff !important; */
+}
+/* ITALIC */
+.page__content em {
+	font-style: italic !important;
+	color: #a697c3 !important;
+}
+
+.page__content strong, .page__content p strong, .page__content b, .page__content p b, .page__content em {
+	background-color: rgba(100, 83, 23, 0.2) !important;
+	border-radius: 3px !important;
+	padding: 3px !important;
+}
+/* CODE */
+.page__content code {
+	font-size: 18px !important;
+	border-radius: 3px !important;
+	background-color: #272822 !important;
+	color: #ffd43b !important;
+	/* background-color: #e2f0ff !important; */
+	/* color: #000 !important; */
+	padding: 3px !important;
+}
+.page__content pre code {
+	background-color: rgba(0,0,0,0) !important;
+	color: #e6db74 !important;
+}
+.page__content pre {
+	margin: 1em 0 !important;
+	padding: 0.5em !important;
+	display: block !important;
+/* 	background-color: #e2f0ff !important; */
+	white-space: pre !important;
+	overflow: auto !important;
+	border-radius: 3px !important;
+}
+.page__content pre, .page__content pre * {
+	font-size: 18px !important;
+	line-height: 1 !important;
+}
+.page__content pre * {
+	display: inline-block !important;
+}
+/* SELECTION */
+::selection {
+    background: #a0a0ff !important;
+    color: #fff !important;
+}
+/* BLOCK_QUOTE */
+.page__content blockquote {
+	font-size: 16px !important;
+	padding: 5px 10px !important;
+	margin: 0.5em 0 !important;
+	border-left: 2px dashed #a5b505 !important;
+	background-color: #444 !important;
+}
+/* TABLE */
+.page__content table {
+	margin: 5px 5px !important;
+	border: 1px solid white !important;
+}
+.page__content thead {
+	background-color: #324963 !important;
+	color: #9bddbb !important;
+}
+.page__content table tr {
+	border-top: 1px solid #dadfe6 !important;
+}
+.page__content table th, .page__content table td {
+	font-size: 18px !important;
+}
+.page__content td, .page__content th {
+	border: 1px solid white !important;
+	padding: 5px 5px !important;
+}
+/* HR */
+.page__content hr {
+	height: 1px !important;
+	padding: 0 !important;
+	marding: 0 !important;
+	background-color: #e1e4e8 !important;
+	border: 0 !important;
+}
+/* LISTS */
+.page__content ul, .page__content ol {
+	padding-left: 30px !important;
+}
+.page__content ul {
+	list-style-type: disc !important;
+	margin: 0.5em 0 !important;
+}
+.page__content ol {
+	list-style-type: decimal !important;
+	margin: 0.5em 0 !important;
+}
+.page__content ul ul {
+	list-style-type: circle !important;
+}
+.page__content ul ul ul {
+	list-style-type: square !important;
+}
+.page__content ol ol, page__content ul ol {
+	list-style-type: lower-roman !important;
+}
+.page__content ul ul ol, .page__content ul ol ol, .page__content ol ol ol, .page__content ol ul ol {
+	list-style-type: lower-alhpa !important;
+}
+/* SUB_SUP */
+.page__content sub, .page__content sup {
+	font-size: 12px !important;
+}
+/* IMAGE */
+.page__content img {
+	border-radius: 5px !important;
+}
