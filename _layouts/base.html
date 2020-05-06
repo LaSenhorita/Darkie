@@ -8,8 +8,8 @@ layout: null
      a88']8i                         a88".8"8)   `"8888:88  " _a8'
    .d8P' PP                        .d8P'.8  d)      "8:88:baad8P'
   ,d8P' ,ama,   .aa,  .ama.g ,mmm  d8P' 8  .8'        88):888P'
- ,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[         
- a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88          
+ ,d88' d8[ "8..a8"88 ,8I"88[ I88' d88   ]IaI"        d8[
+ a88' dP "bm8mP8'(8'.8I  8[      d88'    `"         .88
 ,88I ]8'  .d'.8     88' ,8' I[  ,88P ,ama    ,ama,  d8[  .ama.g
 [88' I8, .d' ]8,  ,88B ,d8 aI   (88',88"8)  d8[ "8. 88 ,8I"88[
 ]88  `888P'  `8888" "88P"8m"    I88 88[ 8[ dP "bm8m88[.8I  8[
@@ -26,17 +26,17 @@ layout: null
   {% else %}
   <title>{{ site.name }} | {{ page.title }}</title>
   {% endif %}
-  
+
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
-  <link rel="stylesheet" href="{{ site.path.css }}/style.css">
-  <link rel="stylesheet" href="{{ site.path.css }}/post_actions.css">
-  <link rel="stylesheet" href="{{ site.path.css }}/page__content.css">
-  <link rel="stylesheet" href="{{ site.path.css }}/custom_elements.css">
-  <link rel="stylesheet" href="{{ site.path.css }}/highlighter_monokai.css">
-     
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-20200425002241.png">
-  <meta name="msapplication-TileImage" content="/mstile-144x144-20200425002241.png">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/style.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/post_actions.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/page__content.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/custom_elements.css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.path.css }}/highlighter_monokai.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/apple-touch-icon-20200425002241.png">
+  <meta name="msapplication-TileImage" content="{{ site.url }}/mstile-144x144-20200425002241.png">
 
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
@@ -61,7 +61,7 @@ layout: null
 
       <ul>
         {% for nav in site.data.navigation %}
-        <li{% if nav.title == page.active_navigation %} class="active"{% endif %}><a href="{{ nav.url }}"><div class="svg-space">{{ nav.svg }}</div>{{ nav.title }}</a></li>
+        <li{% if nav.title == page.active_navigation %} class="active"{% endif %}><a href="{{ site.url }}{{ nav.url }}"><div class="svg-space">{{ nav.svg }}</div>{{ nav.title }}</a></li>
         {% endfor %}
         <!-- <li><a href="labs.html">
             <div class="svg-space"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 64 80" enable-background="new 0 0 64 64" xml:space="preserve">
