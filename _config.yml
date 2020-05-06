@@ -17,7 +17,8 @@ path:
   js: "/assets/js"
 
 hero:
-  url: 'hero.png'
+  url: 'HERO_SADNESS_H_0013.jpg'
+  format: 'jpeg'
   author: "Chiu"
   name: 'Señorita'
   site: 'Señorita'
