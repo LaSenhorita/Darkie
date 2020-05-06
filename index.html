@@ -6,7 +6,7 @@ imgs: ["00.jpg", "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07
 <section class="works smooth-in">
     {% for img in page.imgs %}
 	<div class="work">
-		<img src="{{ site.path.images }}/ignition/{{ img }}">
+		<img src="{{ site.url }}{{ site.path.images }}/ignition/{{ img }}">
 	</div>
 	{% endfor %}
 </section>
