@@ -1,0 +1,37 @@
+---
+layout: default
+active_title: 'Home'
+---
+		<section>
+      <header>
+        <h1 itemprop="name"><a href="site/index.html">Recent Posts</a></h1>
+        <blockquote itemprop="description">Writing on various topics including travel, finance and technology.</blockquote>
+      </header>
+      <ul class="thumbnail grid" itemscope itemtype="https://schema.org/ItemList">
+        <meta itemprop="itemListOrder" content="Unordered">
+        <meta itemprop="name" content="">
+        <meta itemprop="numberOfItems" content="4">
+				{% for post in site.posts limit: 4%}
+        <li class="cell" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
+          <a itemprop="url" href="{{ site.url }}{{ post.url }}/index.html">
+            <figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
+							{% if post.hero.url.size > 0%}
+							{% assign post_hero = (site.url | append: '/assets/images/posts/hero/' | append: post.hero.url ) %}
+							{% else %}
+							{% assign post_hero = (site.url | append: '/assets/images/posts/hero/' | append: site.hero.url ) %}
+							{% endif %}
+              <link itemprop="contentUrl" href="{{ post_hero }}">
+              <meta itemprop="encodingFormat" content="image/png">
+              <meta itemprop="name" content="thumbnail">
+              <meta itemprop="headline" content="{{ post_hero }}">
+              <img itemprop="thumbnailUrl" alt="thumbnail" class="lazyload blur-up" src="{{ post_hero }}" data-src="{{ post_hero }}">
+            </figure>
+            <h2 itemprop="name">{{ post.title }}</h2>
+          </a>
+          <small itemprop="description"><p>{{ post.excerpt | strip_html | strip_newlines | slice: 0, 100 }}...</p><!--<a  target="_blank" rel="external noopener" href="{{ site.url }}">{{ site.name }}</a>--></small>
+        </li>
+				{% endfor %}
+      </ul>
+      <nav class="readmore"><a itemprop="url" href="{{ site.url }}/posts/index.html">View more posts</a></nav>
+
+    </section>

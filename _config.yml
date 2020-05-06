@@ -1,0 +1,48 @@
+name: "Señorita"
+owner: "Chiu"
+author: "Chiu"
+avatar: "/assets/images/avatar_round.png"
+description: "The name is Chiu and this is my personal web site. I see myself as a relentless problem-solver, and I’m always looking for a new challenge."
+# url: "https://LaSenhorita.github.io"
+url: '/Volumes/Shared/Common/Git/Darkie/_site'
+
+range:
+  start: 2020
+  end: 2020
+
+path:
+  assets: "/assets"
+  images: "/assets/images"
+  css: "/assets/css"
+  js: "/assets/js"
+
+hero:
+  loc: '/assets/images/posts/hero'
+  url: 'hero.png'
+  author: "Chiu"
+  name: 'Señorita'
+  site: 'Señorita'
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+permalink: /posts/:title/
+
+sass:
+  sass_dir: "/assets/css/"
+  style: compressed
+
+# Plugins
+plugins: [jekyll-paginate,jekyll-toc,liquid] #,jekyll-asciidoc]
+paginate: 15
+paginate_path: "/posts/page/:num"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: "post"
+      active_title: "Posts"

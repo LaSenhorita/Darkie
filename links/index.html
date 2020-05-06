@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Links"
+---
+<br />
+{% for link in site.data.links %}
+<!-- BEGIN SITE BLOCK -->
+<article itemprop="citation" itemscope itemtype="https://schema.org/SoftwareApplication" id="security7-networks">
+	<!-- <header>
+		<h1 itemprop="name"><a href="{{ link.url }}">{{ link.title }}</a></h1>
+		{% if link.description.size > 0 %}<blockquote itemprop="headline">{{ link.description }}</blockquote>{% endif %}
+	</header> -->
+	<div itemprop="">
+		<a target="_blank" rel="external noopener" href="{{ link.url }}">{{ link.title }}</a>
+		<!-- <a target="_blank" rel="external noopener" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a> -->
+		<p>{% if link.description.size > 0 %}{{ link.description }}{% else %}This is a link to the website I collected earlier{% endif %}</p>
+	</div>
+	<meta itemprop="inLanguage" content="en-US">
+</article>
+<!-- END SITE BLOCK -->
+{% endfor %}
