@@ -16,7 +16,7 @@ layout: default
 		<!-- <h1 itemprop="headline name">{{ page.title }}</h1> -->
 		<p class="muted">
 			<svg aria-hidden="true" class="i-bookmark" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 2 L26 2 26 30 16 20 6 30 Z" /></svg>
-			<a rel="bookmark" itemprop="url" href="{{ site.url }}{{ page.url }}/index.html">Permalink</a>
+			<a rel="bookmark" itemprop="url" href="{{ site.url }}{{ page.url }}index.html">Permalink</a>
 			<!-- <svg aria-hidden="true" style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="16" cy="16" r="14" /><path d="M16 8 L16 16 20 20" /></svg>
 			<a href="index.html">3 minute read</a> -->
 			<svg aria-hidden="true" style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" /></svg>
@@ -89,5 +89,5 @@ layout: default
 	</div>
 
 	<div class="page_actions"><center>
-	<!-- <a onclick="history.back(-1)" class="btn">&lt; Back</a> -->{% if page.next %}<a class="btn" href="{{ site.url }}{{ page.next.url }}/index.html">&lt;&nbsp;Newer:&nbsp;{{ page.next.title }}</a>&nbsp;{% endif %}{% if page.previous %}<a class="btn" href="{{ site.url }}{{ page.previous.url }}/index.html">Older:&nbsp;{{ page.previous.title }}&nbsp;&gt;</a>{% endif %}
+	<!-- <a onclick="history.back(-1)" class="btn">&lt; Back</a> -->{% if page.next %}<a class="btn" href="{{ site.url }}{{ page.next.url }}index.html">&lt;&nbsp;Newer:&nbsp;{{ page.next.title }}</a>&nbsp;{% endif %}{% if page.previous %}<a class="btn" href="{{ site.url }}{{ page.previous.url }}index.html">Older:&nbsp;{{ page.previous.title }}&nbsp;&gt;</a>{% endif %}
 	</center></div>

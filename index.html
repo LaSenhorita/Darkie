@@ -13,7 +13,7 @@ active_title: 'Home'
         <meta itemprop="numberOfItems" content="4">
 				{% for post in site.posts limit: 4%}
         <li class="cell" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareApplication">
-          <a itemprop="url" href="{{ site.url }}{{ post.url }}/index.html">
+          <a itemprop="url" href="{{ site.url }}{{ post.url }}index.html">
             <figure aria-hidden="true" itemscope itemtype="https://schema.org/ImageObject">
 							{% if post.hero.url.size > 0%}
 							{% assign post_hero = (site.url | append: '/assets/images/posts/hero/' | append: post.hero.url ) %}
